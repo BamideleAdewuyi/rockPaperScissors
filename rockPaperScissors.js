@@ -1,4 +1,4 @@
-// Create function for computer's choice
+// Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
 
@@ -14,4 +14,7 @@ function getComputerChoice() {
     console.log(choice)
 }
 
-getComputerChoice()
+// Function for getting human's choice
+function getHumanChoice() {
+    
+} 
