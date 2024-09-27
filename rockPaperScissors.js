@@ -11,7 +11,7 @@ function getComputerChoice() {
     else {
         choice = "Scissors";
     }
-    console.log(choice)
+    return choice
 }
 
 // Function for getting human's choice
