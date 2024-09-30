@@ -39,7 +39,7 @@ function playGame() {
         }
         else if (humanChoice == "rock" && computerChoice == "paper") {
             console.log("You lose! Paper beats rock");
-            computerScore++;
+            computerScore+=1;
         }
         else if (humanChoice == "paper" && computerChoice == "rock") {
             console.log("You win! Paper beats rock");
