@@ -60,9 +60,18 @@ function playRound(humanChoice, computerChoice) {
     return
 }
 
-// Create constants for selections
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-// Call playRound
-playRound(humanSelection, computerSelection);
+
+// Set up game to run for 5 rounds
+function playGame() {
+    // Create constants for selections
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    // Set up while loop
+    while (humanScore + computerScore < 5) {
+        playRound(humanSelection, computerSelection);
+        console.log(`Current scores:\n You: ${humanScore} Computer: ${computerScore}`);
+    }
+    console.log(`Final scores:\n You: ${humanScore} Computer: ${computerScore}`);
+    return
+}
