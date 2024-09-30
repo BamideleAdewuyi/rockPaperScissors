@@ -34,4 +34,8 @@ function getHumanChoice() {
     return choice;
 }
 
-console.log(getHumanChoice())
+
+// Initialise scores as 0
+let humanScore = 0;
+let computerScore = 0;
+console.log(getComputerChoice())
