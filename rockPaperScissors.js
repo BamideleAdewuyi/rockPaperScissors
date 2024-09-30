@@ -54,6 +54,9 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice == computerChoice) {
         console.log(`Draw! ${humanChoice} and ${computerChocie} are even.`);
     }
+    else {
+        console.log("I do not recognise your selection. Please check spelling");
+    }
     return
 }
 
