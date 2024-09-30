@@ -3,13 +3,13 @@ function getComputerChoice() {
     let num = Math.random();
 
     if (num <= 1/3) {
-        choice = "Rock";
+        choice = "rock";
     }
     else if (num > 1/3 && num <= 2/3) {
-        choice = "Paper";
+        choice = "paper";
     }
     else {
-        choice = "Scissors";
+        choice = "scissors";
     }
     return choice
 }
