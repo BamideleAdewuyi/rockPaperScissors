@@ -62,11 +62,12 @@ function playGame() {
         }
         return
     }
-    // Set up do while loop
+    // Set up while loop to run until a point has been scored 5 times
     while ((humanScore + computerScore) < 5) {
         // Create constants for selections
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
+        // Call play round
         playRound(humanSelection, computerSelection);
         console.log(`Current scores:\nYou: ${humanScore} Computer: ${computerScore}`);
     }
