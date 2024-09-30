@@ -21,57 +21,57 @@ function getHumanChoice() {
 }
 
 
-// Initialise scores as 0
-let humanScore = 0;
-let computerScore = 0;
 
-// Function for playing a single round
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "rock" && computerChoice == "scissors") {
-        console.log("You win! Rock beats scissors");
-        humanChoice++;
-    }
-    else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose! Paper beats rock");
-        computerChoice++;
-    }
-    else if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! Paper beats rock");
-        humanChoice++;
-    }
-    else if (humanChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lose! Scissors beats paper");
-        computerChoice++;
-    }
-    if (humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! Scissors beats paper");
-        humanChoice++;
-    }
-    else if (humanChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lose! Rock beats scissors");
-        computerChoice++;
-    }
-    else if (humanChoice == computerChoice) {
-        console.log(`Draw! ${humanChoice} and ${computerChocie} are even.`);
-    }
-    else {
-        console.log("I do not recognise your selection. Please check spelling");
-    }
-    return
-}
 
 
 
 // Set up game to run for 5 rounds
 function playGame() {
-    // Create constants for selections
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    // Set up while loop
-    while (humanScore + computerScore < 5) {
-        playRound(humanSelection, computerSelection);
-        console.log(`Current scores:\n You: ${humanScore} Computer: ${computerScore}`);
+    // Initialise scores as 0
+    let humanScore = 0;
+    let computerScore = 0;
+
+    // Function for playing a single round
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice == "rock" && computerChoice == "scissors") {
+            console.log("You win! Rock beats scissors");
+            humanScore+=1;
+        }
+        else if (humanChoice == "rock" && computerChoice == "paper") {
+            console.log("You lose! Paper beats rock");
+            computerScore++;
+        }
+        else if (humanChoice == "paper" && computerChoice == "rock") {
+            console.log("You win! Paper beats rock");
+            humanScore+=1;
+        }
+        else if (humanChoice == "paper" && computerChoice == "scissors") {
+            console.log("You lose! Scissors beats paper");
+            computerScore+=1;
+        }
+        if (humanChoice == "scissors" && computerChoice == "paper") {
+            console.log("You win! Scissors beats paper");
+            humanScore+=1;
+        }
+        else if (humanChoice == "scissors" && computerChoice == "rock") {
+            console.log("You lose! Rock beats scissors");
+            computerScore+=1;
+        }
+        else if (humanChoice == computerChoice) {
+            console.log(`Draw! ${humanChoice} and ${computerChoice} are even.`);
+        }
+        return
     }
-    console.log(`Final scores:\n You: ${humanScore} Computer: ${computerScore}`);
+    // Set up do while loop
+    while ((humanScore + computerScore) < 5) {
+        // Create constants for selections
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(`Current scores:\nYou: ${humanScore} Computer: ${computerScore}`);
+    }
+    console.log(`Final scores:\nYou: ${humanScore} Computer: ${computerScore}`);
     return
 }
+
+playGame();
