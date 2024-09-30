@@ -38,4 +38,8 @@ function getHumanChoice() {
 // Initialise scores as 0
 let humanScore = 0;
 let computerScore = 0;
-console.log(getComputerChoice())
+
+// Function for playing a single round
+function playRound(humanChoice, computerChoice) {
+    return
+}
