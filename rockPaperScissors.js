@@ -52,9 +52,11 @@ function playRound(humanChoice, computerChoice) {
         computerChoice++;
     }
     else if (humanChoice == computerChoice) {
-        console.log('Draw! ${humanChoice} and ${computerChocie} are even.')
+        console.log('Draw! ${humanChoice} and ${computerChocie} are even.');
     }
     return
 }
 
-console.log(getHumanChoice())
+// Create constants for selections
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
