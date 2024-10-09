@@ -1,5 +1,9 @@
 // Create body object to add buttons and results to
 const body = document.querySelector("body");
+// Prompt div
+const select = document.createElement("p");
+select.textContent = "Select rock, paper or scissors";
+body.appendChild(select);
 // Results div
 const results = document.createElement("div");
 body.appendChild(results);
