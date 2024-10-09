@@ -6,7 +6,8 @@ const results = document.createElement("div");
 body.appendChild(results);
 
 // Message for outcome of each round
-let msg = document.createTextNode("Results of round will show here");
+let msg = document.createElement("p");
+msg.textContent = "Results of round will show here";
 body.appendChild(msg);
 
 // Function for computer's choice
@@ -58,7 +59,34 @@ function playGame() {
     });
 
     function playRound(humanChoice, computerChoice) {
-        
+        if (humanChoice == "rock" && computerChoice == "scissors") {
+            msg.textContent = "You win! Rock beats scissors";
+            humanScore+=1;
+        }
+        else if (humanChoice == "rock" && computerChoice == "paper") {
+            msg.textContent = "You lose! Paper beats rock";
+            computerScore+=1;
+        }
+        else if (humanChoice == "paper" && computerChoice == "rock") {
+            msg.textContent = "You win! Paper beats rock";
+            humanScore+=1;
+        }
+        else if (humanChoice == "paper" && computerChoice == "scissors") {
+            msg.textContent = "You lose! Scissors beats paper";
+            computerScore+=1;
+        }
+        if (humanChoice == "scissors" && computerChoice == "paper") {
+            msg.textContent = "You win! Scissors beats paper";
+            humanScore+=1;
+        }
+        else if (humanChoice == "scissors" && computerChoice == "rock") {
+            msg.textContent = "You lose! Rock beats scissors";
+            computerScore+=1;
+        }
+        else if (humanChoice == computerChoice) {
+            msg.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
+        }
+        return
     };
 
 }
