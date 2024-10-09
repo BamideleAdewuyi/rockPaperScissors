@@ -97,6 +97,10 @@ function playGame() {
     scissors.addEventListener("click", () => {
         playRound("scissors", getComputerChoice);
     })
+
+    // Results div
+    const results = document.createAttribute("div");
+    
     return
 }
 
