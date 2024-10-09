@@ -80,9 +80,9 @@ function playGame() {
     // }
 
     // Button for each selection
-    const rock = document.createAttribute("button");
-    const paper = document.createAttribute("button");
-    const scissors = document.createAttribute("button");
+    const rock = document.createElement("button");
+    const paper = document.createElement("button");
+    const scissors = document.createElement("button");
 
     rock.textContent = "Rock";
     paper.textContent = "Paper";
@@ -99,8 +99,8 @@ function playGame() {
     })
 
     // Results div
-    const results = document.createAttribute("div");
-    
+    const results = document.createElement("div");
+
     return
 }
 
