@@ -23,5 +23,7 @@ function getComputerChoice() {
 
 // Set up game to play for 5 rounds
 function playGame() {
-    
+    const rock = document.createElement("button");
+    const paper = document.createElement("button");
+    const scissors = document.createElement("button");
 }
