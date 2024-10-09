@@ -1,3 +1,6 @@
+// Create body object to add buttons and results to
+const body = document.querySelector("body");
+
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
@@ -87,6 +90,9 @@ function playGame() {
     rock.textContent = "Rock";
     paper.textContent = "Paper";
     scissors.textContent = "Scissors";
+
+
+
 
     rock.addEventListener("click", () => {
         playRound("rock", getComputerChoice);
