@@ -5,6 +5,10 @@ const body = document.querySelector("body");
 const results = document.createElement("div");
 body.appendChild(results);
 
+// Message for outcome of each round
+let msg = document.createTextNode("Results of round will show here");
+body.appendChild(msg);
+
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
