@@ -28,16 +28,6 @@ function getHumanChoice() {
 // Set up game to run for 5 rounds
 function playGame() {
 
-    // Button for each selection
-    const rock = document.createAttribute("button");
-    const paper = document.createAttribute("button");
-    const scissors = document.createAttribute("button");
-
-    rock.textContent = "Rock";
-    paper.textContent = "Paper";
-    scissors.textContent = "Scissors";
-
-    rock.addEventListener
     // Initialise scores as 0
     let humanScore = 0;
     let computerScore = 0;
@@ -88,6 +78,19 @@ function playGame() {
     else {
         console.log("You lost!")
     }
+    
+    // Button for each selection
+    const rock = document.createAttribute("button");
+    const paper = document.createAttribute("button");
+    const scissors = document.createAttribute("button");
+
+    rock.textContent = "Rock";
+    paper.textContent = "Paper";
+    scissors.textContent = "Scissors";
+
+    rock.addEventListener("click", () => {
+        
+    })
     return
 }
 
