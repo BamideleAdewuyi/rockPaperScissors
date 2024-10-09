@@ -34,10 +34,20 @@ function playGame() {
     body.appendChild(rock);
     body.appendChild(paper);
     body.appendChild(scissors);
-    
+
     function getHumanChoice (choice) {
         return choice;
     }
+
+    rock.addEventListener("click", () => {
+        getHumanChoice("rock")
+    });
+    paper.addEventListener("click", () => {
+        getHumanChoice("paper")
+    });
+    scissors.addEventListener("click", () => {
+        getHumanChoice("scissors")
+    });
 }
 
 playGame();
