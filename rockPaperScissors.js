@@ -1,5 +1,7 @@
 // Create body object to add buttons and results to
 const body = document.querySelector("body");
+// Results div
+const results = document.createElement("div");
 
 // Function for computer's choice
 function getComputerChoice() {
@@ -91,8 +93,9 @@ function playGame() {
     paper.textContent = "Paper";
     scissors.textContent = "Scissors";
 
-
-
+    body.appendChild(rock);
+    body.appendChild(paper);
+    body.appendChild(scissors);
 
     rock.addEventListener("click", () => {
         playRound("rock", getComputerChoice);
@@ -103,9 +106,6 @@ function playGame() {
     scissors.addEventListener("click", () => {
         playRound("scissors", getComputerChoice);
     })
-
-    // Results div
-    const results = document.createElement("div");
 
     return
 }
