@@ -1,14 +1,15 @@
 // Create body
 const body = document.querySelector("body");
 
-// Results div
-const results = document.createElement("div");
-body.appendChild(results);
 
 // Message for outcome of each round
 let msg = document.createElement("p");
 msg.textContent = "Results of round will show here";
 body.appendChild(msg);
+
+// Results div
+const results = document.createElement("div");
+body.appendChild(results);
 
 // Function for computer's choice
 function getComputerChoice() {
