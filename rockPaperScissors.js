@@ -1,6 +1,10 @@
 // Create body
 const body = document.querySelector("body");
 
+// Prompt
+const select = document.createElement("h1");
+select.textContent = "Click rock, paper or scissors";
+body.appendChild(select);
 
 // Message for outcome of each round
 let msg = document.createElement("p");
