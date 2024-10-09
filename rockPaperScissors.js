@@ -52,6 +52,11 @@ function playGame() {
     scissors.addEventListener("click", () => {
         getHumanChoice("scissors")
     });
+
+    function playRound(humanChoice, computerChoice) {
+        
+    };
+
 }
 
 playGame();
