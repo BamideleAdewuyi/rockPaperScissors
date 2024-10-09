@@ -53,6 +53,16 @@ function playGame() {
         return choice;
     };
 
+    rock.addEventListener("click", () => {
+        getHumanChoice("rock");
+    });
+    paper.addEventListener("click", () => {
+        getHumanChoice("paper");
+    });
+    scissors.addEventListener("click", () => {
+        getHumanChoice("scissors");
+    });
+
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "scissors") {
             console.log("You win! Rock beats scissors");
@@ -82,19 +92,6 @@ function playGame() {
             console.log(`Draw! ${humanChoice} and ${computerChoice} are even.`);
         }
         return;
-    
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    
-    rock.addEventListener("click", () => {
-        getHumanChoice("rock");
-    });
-    paper.addEventListener("click", () => {
-        getHumanChoice("paper");
-    });
-    scissors.addEventListener("click", () => {
-        getHumanChoice("scissors");
-    });
     
     playRound(humanSelection, computerSelection);
     return;
