@@ -2,6 +2,7 @@
 const body = document.querySelector("body");
 // Results div
 const results = document.createElement("div");
+body.appendChild(results);
 
 // Function for computer's choice
 function getComputerChoice() {
