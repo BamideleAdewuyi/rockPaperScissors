@@ -1,3 +1,9 @@
+// Create body
+const body = document.querySelector("body");
+
+
+
+
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
