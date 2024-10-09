@@ -90,7 +90,11 @@ function playGame() {
         }
         else if (humanChoice == computerChoice) {
             msg.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
-        }
+        };
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
         return
     };
 
