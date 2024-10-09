@@ -5,9 +5,6 @@ const body = document.querySelector("body");
 const results = document.createElement("div");
 body.appendChild(results);
 
-// 
-
-
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
@@ -22,4 +19,9 @@ function getComputerChoice() {
         choice = "scissors";
     }
     return choice
+}
+
+// Set up game to play for 5 rounds
+function playGame() {
+    
 }
