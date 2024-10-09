@@ -27,6 +27,14 @@ function playGame() {
     const paper = document.createElement("button");
     const scissors = document.createElement("button");
 
+    rock.textContent = "Rock";
+    paper.textContent = "Paper";
+    scissors.textContent = "Scissors";
+
+    body.appendChild(rock);
+    body.appendChild(paper);
+    body.appendChild(scissors);
+    
     function getHumanChoice (choice) {
         return choice;
     }
