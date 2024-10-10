@@ -1,3 +1,6 @@
+// Scores
+const scores = document.querySelector("#scores");
+
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
