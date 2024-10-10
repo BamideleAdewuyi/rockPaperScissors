@@ -30,6 +30,10 @@ function playGame() {
 
     // Game over
     function gameOver(human, computer) {
+        // Make buttons disappear
+        buttons.forEach((button) => {
+            document.getElementById(button.id).style.display = "none";
+        })
         if (human > computer) {
             results.textContent = "Game over! You won!";
         }
@@ -39,6 +43,7 @@ function playGame() {
         const restart = document.createElement("button");
         restart.textContent = "Restart";
         div.appendChild(restart);
+
 
         restart.addEventListener("click", () => {
             humanScore = 0;
