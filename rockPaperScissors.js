@@ -30,9 +30,10 @@ function playGame() {
 
     // Game over
     function gameOver(human, computer) {
+
         // Make buttons disappear
         buttons.forEach((button) => {
-            document.getElementById(button.id).style.display = "none";
+            document.getElementById(button.id).style.visibility = "hidden";
         })
         if (human > computer) {
             results.textContent = "Game over! You won!";
@@ -49,6 +50,10 @@ function playGame() {
             humanScore = 0;
             computerScore = 0;
             scores.textContent = "Player Score: 0\nComputer Score: 0";
+            // Make buttons reappear
+            buttons.forEach((button) => {
+                document.getElementById(button.id).style.visibility = "visible";
+            })
             restart.remove();
         });
         
