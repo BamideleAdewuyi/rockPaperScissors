@@ -21,11 +21,17 @@ function getComputerChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    
+    // To show scores
+    function showScores() {
+        return `Your score: ${humanScore}\nComputer score: ${computerScore}`
+    }
 
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "scissors") {
             results.textContent = "You win! Rock beats scissors";
             humanScore+=1;
+            scores.textContent = `Your score: ${humanScore}\nComputer Score: ${computerScore}`;
         }
         else if (humanChoice == "rock" && computerChoice == "paper") {
             results.textContent = "You lose! Paper beats rock";
