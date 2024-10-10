@@ -27,6 +27,10 @@ function playGame() {
         return `Your score: ${humanScore}\nComputer score: ${computerScore}`
     }
 
+    // Game over
+    function gameOver(human, computer) {
+        
+    }
     // buttons is a node list. It looks and acts much like an array.
     const buttons = document.querySelectorAll("button");
     
@@ -74,7 +78,7 @@ function playGame() {
             scores.textContent = showScores();
         }
         if (humanScore > 4 || computerScore > 4) {
-            results.textContent = `Game Over!`;
+            results.textContent = "Finito"
         }
     }
     
