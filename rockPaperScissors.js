@@ -39,6 +39,13 @@ function playGame() {
         const restart = document.createElement("button");
         restart.textContent = "Restart";
         div.appendChild(restart);
+
+        restart.addEventListener("click", () => {
+            humanScore = 0;
+            computerScore = 0;
+            scores.textContent = "Player Score: 0\nComputer Score: 0";
+        });
+        
     }
     // buttons is a node list. It looks and acts much like an array.
     const buttons = document.querySelectorAll("button");
