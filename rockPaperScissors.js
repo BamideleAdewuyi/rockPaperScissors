@@ -1,5 +1,6 @@
-// Scores
+// Scores and results
 const scores = document.querySelector("#scores");
+const results = document.querySelector("#results");
 
 // Function for computer's choice
 function getComputerChoice() {
