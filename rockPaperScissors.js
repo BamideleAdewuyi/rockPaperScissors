@@ -21,7 +21,7 @@ function getComputerChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    
+
     // To show scores
     function showScores() {
         return `Your score: ${humanScore}\nComputer score: ${computerScore}`
@@ -31,30 +31,36 @@ function playGame() {
         if (humanChoice == "rock" && computerChoice == "scissors") {
             results.textContent = "You win! Rock beats scissors";
             humanScore+=1;
-            scores.textContent = `Your score: ${humanScore}\nComputer Score: ${computerScore}`;
+            scores.textContent = showScores();
         }
         else if (humanChoice == "rock" && computerChoice == "paper") {
             results.textContent = "You lose! Paper beats rock";
             computerScore+=1;
+            scores.textContent = showScores();
         }
         else if (humanChoice == "paper" && computerChoice == "rock") {
             results.textContent = "You win! Paper beats rock";
             humanScore+=1;
+            scores.textContent = showScores();
         }
         else if (humanChoice == "paper" && computerChoice == "scissors") {
             results.textContent = "You lose! Scissors beats paper";
             computerScore+=1;
+            scores.textContent = showScores();
         }
         if (humanChoice == "scissors" && computerChoice == "paper") {
             results.textContent = "You win! Scissors beats paper";
             humanScore+=1;
+            scores.textContent = showScores();
         }
         else if (humanChoice == "scissors" && computerChoice == "rock") {
             results.textContent = "You lose! Rock beats scissors";
             computerScore+=1;
+            scores.textContent = showScores();
         }
         else if (humanChoice == computerChoice) {
             results.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
+            scores.textContent = showScores();
         }
     }
     
