@@ -31,23 +31,24 @@ function getComputerChoice() {
     return choice
 }
 
+
+const testBtn = document.createElement("button")
+testBtn.textContent = "Testing";
+body.appendChild(testBtn);
+
+function testFunc() {
+    console.log("testing");
+}
+
+testBtn.addEventListener("click", () => {
+    testFunc();
+});
+
 // Set up game to play for 5 rounds
 function playGame() {
 
     let humanScore = 0;
     let computerScore = 0;
-
-    const rock = document.createElement("button");
-    const paper = document.createElement("button");
-    const scissors = document.createElement("button");
-
-    rock.textContent = "Rock";
-    paper.textContent = "Paper";
-    scissors.textContent = "Scissors";
-
-    body.appendChild(rock);
-    body.appendChild(paper);
-    body.appendChild(scissors);
 
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "scissors") {
@@ -79,17 +80,9 @@ function playGame() {
         }
         return;
     };
-
-    rock.addEventListener("click", () => {
-        playRound("rock", getComputerChoice);
-    });
-    paper.addEventListener("click", () => {
-        playRound("paper", getComputerChoice);
-    });
-    scissors.addEventListener("click", () => {
-        playRound("scissors", getComputerChoice);
-    });
-
+    
 };
 
 playGame();
+
+//// TAKE BUTTONS OUT OF FUNCTION AND TRY IT THAT WAY
