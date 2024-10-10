@@ -44,6 +44,7 @@ function playGame() {
             humanScore = 0;
             computerScore = 0;
             scores.textContent = "Player Score: 0\nComputer Score: 0";
+            restart.remove();
         });
         
     }
