@@ -3,6 +3,11 @@ const div = document.querySelector("div");
 const scores = document.querySelector("#scores");
 const results = document.querySelector("#results");
 
+// Capitalise first letter function
+function capitalizeFirstLetter(str) {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
@@ -101,7 +106,7 @@ function playGame() {
             scores.textContent = showScores();
         }
         if (humanChoice == computerChoice) {
-            results.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
+            results.textContent = `Draw! ${capitalizeFirstLetter(humanChoice)} and ${computerChoice} are even.`;
             scores.textContent = showScores();
         }
         if (humanScore > 4 || computerScore > 4) {
