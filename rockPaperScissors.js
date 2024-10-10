@@ -1,4 +1,5 @@
-// Scores and results
+// Div, scores and results
+const div = document.querySelector("div");
 const scores = document.querySelector("#scores");
 const results = document.querySelector("#results");
 
@@ -85,7 +86,6 @@ function playGame() {
         }
         if (humanScore > 4 || computerScore > 4) {
             gameOver(humanScore, computerScore);
-            
         }
     }
     
