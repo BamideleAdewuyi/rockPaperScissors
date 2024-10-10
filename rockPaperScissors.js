@@ -21,7 +21,7 @@ function getComputerChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-
+    
     // To show scores
     function showScores() {
         return `Your score: ${humanScore}\nComputer score: ${computerScore}`
@@ -33,17 +33,17 @@ function playGame() {
             humanScore+=1;
             scores.textContent = showScores();
         }
-        else if (humanChoice == "rock" && computerChoice == "paper") {
+        if (humanChoice == "rock" && computerChoice == "paper") {
             results.textContent = "You lose! Paper beats rock";
             computerScore+=1;
             scores.textContent = showScores();
         }
-        else if (humanChoice == "paper" && computerChoice == "rock") {
+        if (humanChoice == "paper" && computerChoice == "rock") {
             results.textContent = "You win! Paper beats rock";
             humanScore+=1;
             scores.textContent = showScores();
         }
-        else if (humanChoice == "paper" && computerChoice == "scissors") {
+        if (humanChoice == "paper" && computerChoice == "scissors") {
             results.textContent = "You lose! Scissors beats paper";
             computerScore+=1;
             scores.textContent = showScores();
@@ -53,12 +53,12 @@ function playGame() {
             humanScore+=1;
             scores.textContent = showScores();
         }
-        else if (humanChoice == "scissors" && computerChoice == "rock") {
+        if (humanChoice == "scissors" && computerChoice == "rock") {
             results.textContent = "You lose! Rock beats scissors";
             computerScore+=1;
             scores.textContent = showScores();
         }
-        else if (humanChoice == computerChoice) {
+        if (humanChoice == computerChoice) {
             results.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
             scores.textContent = showScores();
         }
@@ -75,6 +75,7 @@ function playGame() {
         playRound(button.id, getComputerChoice())
     });
     });
+    
 }
 
 playGame();
