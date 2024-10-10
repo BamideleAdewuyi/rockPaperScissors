@@ -59,6 +59,7 @@ function playGame() {
             buttons.forEach((button) => {
                 document.getElementById(button.id).style.visibility = "visible";
             })
+            results.textContent = "Results of each round will appear here";
             restart.remove();
         });
         
