@@ -18,6 +18,9 @@ function getComputerChoice() {
 }
 
 function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "scissors") {
             console.log("You win! Rock beats scissors");
