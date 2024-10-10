@@ -37,7 +37,7 @@ function playGame() {
         playRound(button.id, getComputerChoice())
     });
     });
-    
+
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "scissors") {
             results.textContent = "You win! Rock beats scissors";
@@ -72,6 +72,9 @@ function playGame() {
         if (humanChoice == computerChoice) {
             results.textContent = `Draw! ${humanChoice} and ${computerChoice} are even.`;
             scores.textContent = showScores();
+        }
+        if (humanScore > 4 || computerScore > 4) {
+            results.textContent = `Game Over!`;
         }
     }
     
