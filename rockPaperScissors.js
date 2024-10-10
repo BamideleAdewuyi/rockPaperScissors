@@ -1,5 +1,3 @@
-
-
 // Function for computer's choice
 function getComputerChoice() {
     let num = Math.random();
@@ -43,32 +41,6 @@ function playRound(humanChoice, computerChoice) {
     }
     else if (humanChoice == computerChoice) {
         console.log(`Draw! ${humanChoice} and ${computerChoice} are even.`);
-    
-    return;
-}
-const testBtn = document.createElement("button")
-testBtn.textContent = "Testing";
-body.appendChild(testBtn);
-
-function testFunc() {
-    console.log("testing");
+    }
 }
 
-testBtn.addEventListener("click", () => {
-    testFunc();
-});
-
-// 
-
-// Set up game to play for 5 rounds
-function playGame() {
-
-    let humanScore = 0;
-    let computerScore = 0;
-
-    
-    };
-
-playGame();
-
-//// TAKE BUTTONS OUT OF FUNCTION AND TRY IT THAT WAY
