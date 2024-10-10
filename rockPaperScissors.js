@@ -29,7 +29,12 @@ function playGame() {
 
     // Game over
     function gameOver(human, computer) {
-        
+        if (human > computer) {
+            results.textContent = "Game over! You won!";
+        }
+        else {
+            results.textContent = "Game over! You lost!";
+        }
     }
     // buttons is a node list. It looks and acts much like an array.
     const buttons = document.querySelectorAll("button");
